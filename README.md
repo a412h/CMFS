@@ -8,10 +8,7 @@ This library provides a header-only, easy to use Matrix-Free CUDA / C++ PCG syst
 The user provides the action of the FEM derived operator A over a solution vector u, at a quadrature point. The library handles the rest.
 
 ## Performance tests
-With a 3D Poisson equation with homogeneous Dirichlet boundary conditions  
-$$
--\Delta u = 1 \quad \text{on } [0,1]^3, \qquad u = 0 \text{ on } \partial\Omega
-$$  
+With a 3D Poisson equation with homogeneous Dirichlet boundary conditions,  
 we test the highly optimized cuSPARSE library against the matrix-free implementation:  
 - we assemble the sparse matrix with cuSPARSE functions, and solve with the CUDA PCG solver written here (it is close to what Nvidia offers at their CUDALibrarySamples),  
 - for the matrix-free version - obviously we never assemble the sparse matrix - and we solve with the exact same CUDA PCG solver,
