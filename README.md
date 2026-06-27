@@ -13,7 +13,7 @@ we test the highly optimized cuSPARSE library against the matrix-free implementa
 - we assemble the sparse matrix with cuSPARSE functions, and solve with the CUDA PCG solver written here (it is close to what Nvidia offers at their CUDALibrarySamples),  
 - for the matrix-free version - obviously we never assemble the sparse matrix - and we solve with the exact same CUDA PCG solver,
 - we compare the throughput of the whole solving of the equation,
-- the experiment is run on a laptop with an RTX 4070 card.
+- the experiment is run on a laptop with a RTX 4070 card.
 
 #### Throughput for whole solver of Poisson 3D Equation (fp32 and fp64)
 
